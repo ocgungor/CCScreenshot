@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import "CCScreenshot.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -46,9 +47,36 @@
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
+    
+        
+        CCMenuItem *sceenshot = [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithFile:@"Icon.png"] selectedSprite:nil target:self selector:@selector(takeScreenshot)];
+        
+        CCMenu *menu = [CCMenu menuWithItems:sceenshot, nil];
+        menu.position =  ccp(100, 100);
+        [menu alignItemsHorizontallyWithPadding:15];
+        [self addChild: menu z: 100];
+
+        
+        
+        
+        
+        
 	}
 	return self;
 }
+
+- (void) takeScreenshot {
+    CCScreenshot *scr = [[CCScreenshot alloc] init];
+    
+    
+    
+    CCSprite *screenshot = [[CCScreenshot sharedInstance] takeScreenshotAsCCSprite];
+    [scr release];
+    screenshot.scale = .3;
+    screenshot.position = ccp(100, 300);
+    [self addChild:screenshot];
+}
+
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

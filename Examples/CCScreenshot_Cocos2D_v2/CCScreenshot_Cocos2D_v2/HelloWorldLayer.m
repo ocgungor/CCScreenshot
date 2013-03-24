@@ -12,6 +12,7 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+#import "CCScreenshot.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -101,10 +102,31 @@
 		
 		// Add the menu to the layer
 		[self addChild:menu];
+        
+        
+        CCMenuItem *sceenshot = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithFile:@"Icon.png"] \
+                                                        selectedSprite:nil
+                                                                 block:^(id sender) {
+                                                                     CCScreenshot *scr = [[CCScreenshot alloc] init];
+                                                                     
+                                                                     CCSprite *screenshot = [scr takeScreenshotAsCCSprite];
+                                                                     [scr release];
+                                                                     screenshot.scale = .3;
+                                                                     screenshot.position = ccp(100, 100);
+                                                                     [self addChild:screenshot];
+                                                                 }];
+        CCMenu *menuu = [CCMenu menuWithItems:sceenshot, nil];
+        menuu.position =  ccp(100, 100);
+        [menuu alignItemsHorizontallyWithPadding:15];
+        [self addChild: menuu z: 100];
 
 	}
 	return self;
 }
+
+
+
+
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

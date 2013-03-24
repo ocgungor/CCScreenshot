@@ -139,6 +139,8 @@
 		5660AD0216FE7B5A00689225 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD0116FE7B5A00689225 /* AppDelegate.m */; };
 		5660AD0516FE7B5A00689225 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD0416FE7B5A00689225 /* HelloWorldLayer.m */; };
 		5660AD0816FE7B5A00689225 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD0716FE7B5A00689225 /* IntroLayer.m */; };
+		5660AE9016FE9D9100689225 /* CCScreenhot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5660AE8F16FE9D9100689225 /* CCScreenhot.m */; };
+		5660AE9416FEB81800689225 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5660AE9316FEB81800689225 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -420,6 +422,9 @@
 		5660AD0416FE7B5A00689225 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		5660AD0616FE7B5A00689225 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		5660AD0716FE7B5A00689225 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		5660AE8E16FE9D9100689225 /* CCScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCScreenshot.h; path = ../../CCScreenshot.h; sourceTree = "<group>"; };
+		5660AE8F16FE9D9100689225 /* CCScreenhot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCScreenhot.m; path = ../../CCScreenhot.m; sourceTree = "<group>"; };
+		5660AE9316FEB81800689225 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5660AE9416FEB81800689225 /* AssetsLibrary.framework in Frameworks */,
 				5660AB6116FE7B5700689225 /* QuartzCore.framework in Frameworks */,
 				5660AB6316FE7B5700689225 /* OpenGLES.framework in Frameworks */,
 				5660AB6516FE7B5700689225 /* OpenAL.framework in Frameworks */,
@@ -445,6 +451,9 @@
 		5660AB5416FE7B5700689225 = {
 			isa = PBXGroup;
 			children = (
+				5660AE9316FEB81800689225 /* AssetsLibrary.framework */,
+				5660AE8E16FE9D9100689225 /* CCScreenshot.h */,
+				5660AE8F16FE9D9100689225 /* CCScreenhot.m */,
 				5660AB7216FE7B5700689225 /* CCScreenshot_Cocos2D_v2 */,
 				5660AB5F16FE7B5700689225 /* Frameworks */,
 				5660AB5E16FE7B5700689225 /* Products */,
@@ -1054,6 +1063,7 @@
 				5660AD0216FE7B5A00689225 /* AppDelegate.m in Sources */,
 				5660AD0516FE7B5A00689225 /* HelloWorldLayer.m in Sources */,
 				5660AD0816FE7B5A00689225 /* IntroLayer.m in Sources */,
+				5660AE9016FE9D9100689225 /* CCScreenhot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1064,7 +1074,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oguzhan Gungor (7LZK4K8N3P)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1076,6 +1087,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "176FEED0-A33F-4674-AC6F-621D17FEF6E1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1085,7 +1097,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -1104,6 +1117,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oguzhan Gungor (7LZK4K8N3P)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1116,6 +1131,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "176FEED0-A33F-4674-AC6F-621D17FEF6E1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1124,6 +1140,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CCScreenshot_Cocos2D_v2/Prefix.pch;
@@ -1159,6 +1177,7 @@
 				5660AD0D16FE7B5A00689225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
