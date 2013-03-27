@@ -1,7 +1,7 @@
 /*	
  * CCScreenshot.h
  *
- * Created by Oguzhan Gungor on 24/03/13.
+ * Created by Oguzhan Cansin Gungor on 24/03/13.
  *
  * Copyright (c) 2013 Aslan-Apps. All rights reserved.
  *
@@ -44,13 +44,65 @@
 
 @property (nonatomic, retain) UIImage *lastscreenshot;
 
-+ (CCScreenshot *) sharedInstance;
++ (CCScreenshot *) screenshot;
 
 
 - (UIImage *) takeScreenshotAsUIImage;
 - (CCSprite *) takeScreenshotAsCCSprite;
 - (CCTexture2D *) takeScreenshotAsCCTexture2D;
 
+- (void) saveScreenshotToCameraRollWithTitle:(NSString *) title
+                                  andMessage:(NSString *) message;
 
+- (UIImage *) takeScreenshotAsUIImageWith3DText:(NSString *) text
+                                   withFontName:(NSString *) fontName
+                                   withFontSize:(int) fontSize
+                           withForeGroundColour:(UIColor *) foregroundColour
+                               withShadowColour:(UIColor *) shadowColour
+                              withOutlineColour:(UIColor *) outlineColour
+                                      withDepth:(int) depth
+                                   withPosition:(CGPoint) position;
+
+- (CCSprite *) takeScreenshotAsCCSpriteWith3DText:(NSString *) title
+                                   withFontName:(NSString *) fontName
+                                   withFontSize:(int) fontSize
+                           withForeGroundColour:(UIColor *) foregroundColour
+                               withShadowColour:(UIColor *) shadowColour
+                              withOutlineColour:(UIColor *) outlineColour
+                                      withDepth:(int) depth
+                                   withPosition:(CGPoint) position;
+
+- (CCTexture2D *) takeScreenshotAsCCTexture2DWith3DText:(NSString *) title
+                                           withFontName:(NSString *) fontName
+                                           withFontSize:(int) fontSize
+                                   withForeGroundColour:(UIColor *) foregroundColour
+                                       withShadowColour:(UIColor *) shadowColour
+                                      withOutlineColour:(UIColor *) outlineColour
+                                              withDepth:(int) depth
+                                           withPosition:(CGPoint) position;
+
+- (UIImage *)takeScreenshotAsUIImageWith2DText:(NSString *)text
+                                      fontName:(NSString*) fontName
+                                      fontSize:(int) fontSize
+                                       withRed:(int) red
+                                     withGreen:(int) green
+                                      withBlue:(int) blue
+                                  withPosition:(CGPoint) position;
+
+- (CCSprite *)takeScreenshotAsCCSpriteWith2DText:(NSString *)text
+                                      fontName:(NSString*) fontName
+                                      fontSize:(int) fontSize
+                                       withRed:(int) red
+                                     withGreen:(int) green
+                                      withBlue:(int) blue
+                                    withPosition:(CGPoint) position;
+
+- (CCTexture2D *)takeScreenshotAsCCTexture2DWith2DText:(NSString *)text
+                                      fontName:(NSString*) fontName
+                                      fontSize:(int) fontSize
+                                       withRed:(int) red
+                                     withGreen:(int) green
+                                      withBlue:(int) blue
+                                    withPosition:(CGPoint) position;
 
 @end

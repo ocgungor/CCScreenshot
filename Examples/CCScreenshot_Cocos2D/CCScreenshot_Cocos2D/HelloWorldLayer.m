@@ -66,15 +66,17 @@
 }
 
 - (void) takeScreenshot {
-    CCScreenshot *scr = [[CCScreenshot alloc] init];
     
+    CCSprite *screenshot = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith3DText:@"whats up?" withFontName:@"Baskerville" withFontSize:40 withForeGroundColour:[UIColor whiteColor] withShadowColour:[UIColor whiteColor] withOutlineColour:[UIColor yellowColor] withDepth:3 withPosition:CGPointMake(100, 300)];
     
+    CCSprite *screenshot1 = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith2DText:@"goof" fontName:@"Baskerville" fontSize:40 withRed:255 withGreen:0 withBlue:0 withPosition:ccp(100, 100)];
+    screenshot1.scale = .5;
+    screenshot1.position = ccp(100, 400);
+    [self addChild:screenshot1];
+
+    [[CCScreenshot screenshot] saveScreenshotToCameraRollWithTitle:@"good job" andMessage:@"image is saved"];
     
-    CCSprite *screenshot = [[CCScreenshot sharedInstance] takeScreenshotAsCCSprite];
-    [scr release];
-    screenshot.scale = .3;
-    screenshot.position = ccp(100, 300);
-    [self addChild:screenshot];
+    //UIImageWriteToSavedPhotosAlbum([[CCScreenshot screenshot] lastscreenshot], self, nil, nil);
 }
 
 
