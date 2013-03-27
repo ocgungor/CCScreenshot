@@ -1,7 +1,9 @@
 CCScreenshot
 ============
 
-Cocos2D Screenshot Class
+Cocos2D Screenshot Singleton Class
+
+Cocos2d 1 and Cocos2D 2 & ARC supported. 
 
 
 
@@ -26,12 +28,47 @@ CCTexture2D *texture = [[CCScreenshot screenshot] takeScreenshotAsCCTexture2D];
 Alternatively, if you need to add some text in to your screenshot, you can use one of the following methods.
 
 Screenshot as UIImage with 2D text
+```
+    UIImage *screenshot = [[CCScreenshot screenshot] takeScreenshotAsUIImageWith2DText:@"Test"
+                                                                                 fontName:@"Baskerville"
+                                                                                 fontSize:40
+                                                                                  withRed:255
+                                                                                withGreen:0
+                                                                                 withBlue:0
+                                                                             withPosition:ccp(100, 100)];
+```
+Screenshot as UIImage with 3D text
+```
 
+```
+Screenshot as CCSprite with 2D text
+```
+    CCSprite *screenshot  = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith2DText:@"Test"
+                                                                                 fontName:@"Baskerville"
+                                                                                 fontSize:40
+                                                                                  withRed:255
+                                                                                withGreen:0
+                                                                                 withBlue:0
+                                                                             withPosition:ccp(100, 100)];
+```
+Screenshot as CCSprite with 3D text
+```
 
+```
+Screenshot as CCTexture2D with 2D text
+```
+ CCTexture2D *screenshot = [[CCScreenshot screenshot] takeScreenshotAsCCTexture2DWith2DText:@"Test"
+                                                                                 fontName:@"Baskerville"
+                                                                                 fontSize:40
+                                                                                  withRed:255
+                                                                                withGreen:0
+                                                                                 withBlue:0
+                                                                             withPosition:ccp(100, 100)];
+```
+Screenshot as CCTexture2D with 3D text
+```
 
-
-
-
+```
 
 Copyright
 ============

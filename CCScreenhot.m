@@ -541,7 +541,7 @@ static CCScreenshot *sharedInstance = nil;
 #endif
 }
 
-- (void) saveScreenshotToCameraRollWithTitle:(NSString *) title andMessage:(NSString *) message {
+- (void) saveScreenshotToCameraRoll {
     dispatch_async(dispatch_get_main_queue(), ^{
         
         UIImageWriteToSavedPhotosAlbum(self.lastscreenshot, self, nil, nil);

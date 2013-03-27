@@ -51,8 +51,7 @@
 - (CCSprite *) takeScreenshotAsCCSprite;
 - (CCTexture2D *) takeScreenshotAsCCTexture2D;
 
-- (void) saveScreenshotToCameraRollWithTitle:(NSString *) title
-                                  andMessage:(NSString *) message;
+- (void) saveScreenshotToCameraRoll;
 
 - (UIImage *) takeScreenshotAsUIImageWith3DText:(NSString *) text
                                    withFontName:(NSString *) fontName
