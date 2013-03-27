@@ -10,7 +10,7 @@ Cocos2d 1 and Cocos2D 2 & ARC supported.
 USAGE
 ===========
 
-Simply import CCScreenshot.h and call one of the following methods according to your need.
+Add  CCScreenshot.h and  CCScreenshot.m files into your project and simply import CCScreenshot.h and call one of the following methods according to your need.
 
 Screenshot as UIImage
 ```
