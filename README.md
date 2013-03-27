@@ -11,17 +11,17 @@ USAGE
 Simply import CCScreenshot.h and call one of the following methods according to your need.
 
 Screenshot as UIImage
-`
+```
 UIImage *img = [[CCScreenshot screenshot] takeScreenshotAsUIImage];
-`
+```
 Screenshot as CCSprite
-`
+```
 CCSprite *sp = [[CCScreenshot screenshot] takeScreenshotAsCCSprite];
-`
+```
 Screenshot as CCTexture2D
-`
+```
 CCTexture2D *texture = [[CCScreenshot screenshot] takeScreenshotAsCCTexture2D];
-`
+```
 
 Alternatively, if you need to add some text in to your screenshot, you can use one of the following methods.
 
