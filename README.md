@@ -39,7 +39,14 @@ Screenshot as UIImage with 2D text
 ```
 Screenshot as UIImage with 3D text
 ```
-
+    UIImage *screenshot = [[CCScreenshot screenshot] takeScreenshotAsUIImageWith3DText:@"Test"
+                                                                            withFontName:@"Baskerville"
+                                                                            withFontSize:40
+                                                                    withForeGroundColour:[UIColor whiteColor]
+                                                                        withShadowColour:[UIColor redColor]
+                                                                       withOutlineColour:[UIColor yellowColor]
+                                                                               withDepth:3
+                                                                            withPosition:CGPointMake(100, 300)];
 ```
 Screenshot as CCSprite with 2D text
 ```
@@ -53,7 +60,14 @@ Screenshot as CCSprite with 2D text
 ```
 Screenshot as CCSprite with 3D text
 ```
-
+    CCSprite *screenshot = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith3DText:@"Test"
+                                                                            withFontName:@"Baskerville"
+                                                                            withFontSize:40
+                                                                    withForeGroundColour:[UIColor whiteColor]
+                                                                        withShadowColour:[UIColor redColor]
+                                                                       withOutlineColour:[UIColor yellowColor]
+                                                                               withDepth:3
+                                                                            withPosition:CGPointMake(100, 300)];
 ```
 Screenshot as CCTexture2D with 2D text
 ```
@@ -67,8 +81,30 @@ Screenshot as CCTexture2D with 2D text
 ```
 Screenshot as CCTexture2D with 3D text
 ```
+    CCTexture2D *screenshot = [[CCScreenshot screenshot] takeScreenshotAsCCTexture2DWith3DText:@"Test"
+                                                                            withFontName:@"Baskerville"
+                                                                            withFontSize:40
+                                                                    withForeGroundColour:[UIColor whiteColor]
+                                                                        withShadowColour:[UIColor redColor]
+                                                                       withOutlineColour:[UIColor yellowColor]
+                                                                               withDepth:3
+                                                                            withPosition:CGPointMake(100, 300)];
+```
+
+Saving your screenshot to your idevice's camera roll
 
 ```
+    [[CCScreenshot screenshot] saveScreenshotToCameraRoll];
+```
+
+
+Alternative usage: 
+
+There are 2 `takeScreenshotAsUIImage` method implementations. One of them is commented out. You could try that.
+Also you could try the alternative implementation of `saveScreenshotToCameraRoll` which uses `AssetsLibrary framework`.
+
+
+
 
 Copyright
 ============

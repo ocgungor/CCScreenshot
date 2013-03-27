@@ -67,7 +67,14 @@
 
 - (void) takeScreenshot {
     
-    CCSprite *screenshot = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith3DText:@"whats up?" withFontName:@"Baskerville" withFontSize:40 withForeGroundColour:[UIColor whiteColor] withShadowColour:[UIColor whiteColor] withOutlineColour:[UIColor yellowColor] withDepth:3 withPosition:CGPointMake(100, 300)];
+    CCSprite *screenshot = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith3DText:@"Test"
+                                                                            withFontName:@"Baskerville"
+                                                                            withFontSize:40
+                                                                    withForeGroundColour:[UIColor whiteColor]
+                                                                        withShadowColour:[UIColor redColor]
+                                                                       withOutlineColour:[UIColor yellowColor]
+                                                                               withDepth:3
+                                                                            withPosition:CGPointMake(100, 300)];
     
     CCSprite *screenshot1 = [[CCScreenshot screenshot] takeScreenshotAsCCSpriteWith2DText:@"goof"
                                                                                  fontName:@"Baskerville"
