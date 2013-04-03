@@ -3,7 +3,10 @@ CCScreenshot
 
 Cocos2D Screenshot Singleton Class
 
-Cocos2d 1 and Cocos2D 2 & ARC supported. 
+Both ***Cocos2d 1*** and ***Cocos2D 2*** supported.
+Both ***ARC*** and ***MRC*** supported. 
+
+Cocos2D Mac is on the way...
 
 
 
@@ -108,7 +111,7 @@ Also you could try the alternative implementation of `saveScreenshotToCameraRoll
 
 Copyright
 ============
-
+```
 /*	
  *
  *
@@ -145,6 +148,6 @@ Copyright
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
+```
 
 

@@ -47,9 +47,11 @@ static CCScreenshot *sharedInstance = nil;
 
 + (CCScreenshot *) screenshot {
     
-    if (!sharedInstance) 
+    static dispatch_once_t que;
+    if (!sharedInstance)
+    dispatch_once(&que, ^{
         sharedInstance = [[CCScreenshot alloc] init];
-        
+    });
     return sharedInstance;
 }
 
